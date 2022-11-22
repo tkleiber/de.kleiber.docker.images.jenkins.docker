@@ -1,0 +1,9 @@
+= de.kleiber.docker.images.jenkins.docker
+
+[source]
+----
+export DOCKER_BUILDKIT=1
+docker build --progress=plain --tag tkleiber/jenkins:docker .
+docker login -u tkleiber
+docker image push tkleiber/jenkins:docker
+----
